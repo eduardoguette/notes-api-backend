@@ -1,5 +1,3 @@
-// const http = require('http');
-
 const express = require('express')
 const cors = require('cors')
 
@@ -76,7 +74,6 @@ app.use((request, response) => {
     error: 'Not found',
   })
 })
-
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
