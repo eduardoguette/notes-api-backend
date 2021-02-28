@@ -21,13 +21,8 @@ let notes = [
     id: 2,
     content: 'Probar la API',
     important: false,
-  }
+  },
 ]
-
-// const app = http.createServer((request, response) => {
-// 	response.writeHead(200, { 'Content-Type': 'application/json' });
-// 	response.end(JSON.stringify(notes));
-// });
 
 app.get('/', (request, response) => {
   response.send('<h1>Appi de notas</h1>')
@@ -82,11 +77,7 @@ app.use((request, response) => {
   })
 })
 
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })
-
-// const PORT = 3001;
-// app.listen(PORT);
-// console.log(`Server running on port ${PORT}`);
